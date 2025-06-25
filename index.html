@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Flip App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional: hide scroll if content fits */
+    html, body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌙/☀️ Mode Toggle -->
+  <button id="toggleMode" style="position: absolute; top: 15px; right: 15px; z-index: 10;">
+    🌙 Dark Mode
+  </button>
+
+  <!-- Flip Box Container -->
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      
+      <!-- Front Side (Form) -->
+      <div class="flip-box-front">
+        <h1 class="title">🌤 Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <button onclick="getWeather()">Get Weather</button>
+      </div>
+      
+      <!-- Back Side (Weather Info) -->
+      <div class="flip-box-back" id="weatherResult">
+        <div id="forecast" style="margin-top: 20px;">
+  <!-- 5-day forecast cards will appear here -->
+</div>
+
+        <!-- Weather info will be dynamically inserted here -->
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
