@@ -1,6 +1,7 @@
 // Fetch weather by city name
 async function getWeatherByCity(city) {
-  const url = `/api/weather?city=${city}`;
+//   const url = `/api/weather?city=${city}`;
+const url = `https://weather-app-raei.onrender.com/api/weather?city=${city}`;
   fetchAndDisplayWeather(url);
   fetchForecast(city);
   flipCard();
@@ -8,7 +9,8 @@ async function getWeatherByCity(city) {
 
 // Fetch weather by coordinates
 async function getWeatherByLocation(lat, lon) {
-  const url = `/api/weather?lat=${lat}&lon=${lon}`;
+//   const url = `/api/weather?lat=${lat}&lon=${lon}`;
+const url = `https://weather-app-raei.onrender.com/api/weather?lat=${lat}&lon=${lon}`;
   fetchAndDisplayWeather(url);
 }
 
@@ -48,7 +50,8 @@ async function fetchAndDisplayWeather(url) {
 // Fetch and show forecast
 async function fetchForecast(city) {
   try {
-    const response = await fetch(`/api/forecast?city=${city}`);
+    // const response = await fetch(`/api/forecast?city=${city}`);
+    const url = `https://weather-app-raei.onrender.com/api/forecast?city=${city}`;
     const data = await response.json();
 
     if (data.cod !== "200") return;
